@@ -1,0 +1,853 @@
+{
+  "contractName": "CLODAOReceivablesAsset",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "currency",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "principal",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "dailyInterestRate",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "interestCalculcationMethod",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"currency\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"dailyInterestRate\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"interestCalculcationMethod\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"principal\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"See https://github.com/michaeldowling/clodao\",\"kind\":\"dev\",\"methods\":{\"currency()\":{\"returns\":{\"_0\":\"The currency code this asset is denominated in\"}},\"dailyInterestRate()\":{\"returns\":{\"_0\":\"The interest rate per day, at 6 levels of precision\"}},\"decimals()\":{\"returns\":{\"_0\":\"Returns the number of decimals used to get its user representation.\"}},\"interestCalculcationMethod()\":{\"returns\":{\"_0\":\"STATED_RATE or BANK_METHOD\"}},\"principal()\":{\"returns\":{\"_0\":\"The amount of the original principal\"}}},\"title\":\"CLODAOAsset - Standard Asset within a CLODAO\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"currency()\":{\"notice\":\"Get the currency this asset is denominated in\"},\"dailyInterestRate()\":{\"notice\":\"Interest Rate, per day\"},\"decimals()\":{\"notice\":\"For example, if decimals equals 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 ** 2).  Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei.\"},\"interestCalculcationMethod()\":{\"notice\":\"The method for calculating interest\"},\"principal()\":{\"notice\":\"Get the original princpal of this asset\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Interfaces/CLODAOAsset.sol\":\"CLODAOReceivablesAsset\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Interfaces/CLODAOAsset.sol\":{\"keccak256\":\"0x087bb5331ca9317b069900212808cf6c0cbc494735f1a971af131de97f8ce2f1\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://174cf899cadfb2f68b31532ce9803c4938d1c3ff1ab42de64d5bd682ed863046\",\"dweb:/ipfs/QmZA6U5WVsURER2WVkfpwy6dXySGqiJkJ6kvT8fBCh7pkw\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: Apache-2.0\npragma solidity ^0.8.0;\n\n/// @title CLODAOAsset - Standard Asset within a CLODAO\n/// @dev See https://github.com/michaeldowling/clodao\ninterface CLODAOReceivablesAsset {\n\n\n\n  /// @notice Get the currency this asset is denominated in\n  /// @return The currency code this asset is denominated in\n  function currency() external view returns (string memory);\n\n  /// @notice For example, if decimals equals 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 ** 2).  Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei.\n  /// @return Returns the number of decimals used to get its user representation.\n  function decimals() external view returns (uint8);\n\n  /// @notice Get the original princpal of this asset\n  /// @return The amount of the original principal\n  function principal() external view returns (uint32);\n\n  /// @notice Interest Rate, per day\n  /// @return The interest rate per day, at 6 levels of precision\n  function dailyInterestRate() external view returns (uint32);\n\n  /// @notice The method for calculating interest\n  /// @return STATED_RATE or BANK_METHOD\n  function interestCalculcationMethod() external view returns (string memory);\n\n\n}\n",
+  "sourcePath": "/Users/michaeldowling/Projects/clodao/github.com/michaeldowling/clodao/dlt/contracts/Interfaces/CLODAOAsset.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Interfaces/CLODAOAsset.sol",
+    "exportedSymbols": {
+      "CLODAOReceivablesAsset": [
+        401
+      ]
+    },
+    "id": 402,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 369,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "CLODAOReceivablesAsset",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 370,
+          "nodeType": "StructuredDocumentation",
+          "src": "64:110:4",
+          "text": "@title CLODAOAsset - Standard Asset within a CLODAO\n @dev See https://github.com/michaeldowling/clodao"
+        },
+        "fullyImplemented": false,
+        "id": 401,
+        "linearizedBaseContracts": [
+          401
+        ],
+        "name": "CLODAOReceivablesAsset",
+        "nameLocation": "184:22:4",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 371,
+              "nodeType": "StructuredDocumentation",
+              "src": "214:118:4",
+              "text": "@notice Get the currency this asset is denominated in\n @return The currency code this asset is denominated in"
+            },
+            "functionSelector": "e5a6b10f",
+            "id": 376,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currency",
+            "nameLocation": "344:8:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 372,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "352:2:4"
+            },
+            "returnParameters": {
+              "id": 375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 374,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 376,
+                  "src": "378:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 373,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "377:15:4"
+            },
+            "scope": 401,
+            "src": "335:58:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 377,
+              "nodeType": "StructuredDocumentation",
+              "src": "397:296:4",
+              "text": "@notice For example, if decimals equals 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 ** 2).  Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei.\n @return Returns the number of decimals used to get its user representation."
+            },
+            "functionSelector": "313ce567",
+            "id": 382,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decimals",
+            "nameLocation": "705:8:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 378,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "713:2:4"
+            },
+            "returnParameters": {
+              "id": 381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 380,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 382,
+                  "src": "739:5:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 379,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "739:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "738:7:4"
+            },
+            "scope": 401,
+            "src": "696:50:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 383,
+              "nodeType": "StructuredDocumentation",
+              "src": "750:102:4",
+              "text": "@notice Get the original princpal of this asset\n @return The amount of the original principal"
+            },
+            "functionSelector": "ba5d3078",
+            "id": 388,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "principal",
+            "nameLocation": "864:9:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "873:2:4"
+            },
+            "returnParameters": {
+              "id": 387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 386,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 388,
+                  "src": "899:6:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 385,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "899:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "898:8:4"
+            },
+            "scope": 401,
+            "src": "855:52:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 389,
+              "nodeType": "StructuredDocumentation",
+              "src": "911:100:4",
+              "text": "@notice Interest Rate, per day\n @return The interest rate per day, at 6 levels of precision"
+            },
+            "functionSelector": "7fca631f",
+            "id": 394,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "dailyInterestRate",
+            "nameLocation": "1023:17:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 390,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1040:2:4"
+            },
+            "returnParameters": {
+              "id": 393,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 392,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 394,
+                  "src": "1066:6:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 391,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1066:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1065:8:4"
+            },
+            "scope": 401,
+            "src": "1014:60:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 395,
+              "nodeType": "StructuredDocumentation",
+              "src": "1078:88:4",
+              "text": "@notice The method for calculating interest\n @return STATED_RATE or BANK_METHOD"
+            },
+            "functionSelector": "9dce3c78",
+            "id": 400,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "interestCalculcationMethod",
+            "nameLocation": "1178:26:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 396,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1204:2:4"
+            },
+            "returnParameters": {
+              "id": 399,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 398,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 400,
+                  "src": "1230:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 397,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1230:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1229:15:4"
+            },
+            "scope": 401,
+            "src": "1169:76:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 402,
+        "src": "174:1075:4",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:1211:4"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/Interfaces/CLODAOAsset.sol",
+    "exportedSymbols": {
+      "CLODAOReceivablesAsset": [
+        401
+      ]
+    },
+    "id": 402,
+    "license": "Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 369,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "CLODAOReceivablesAsset",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 370,
+          "nodeType": "StructuredDocumentation",
+          "src": "64:110:4",
+          "text": "@title CLODAOAsset - Standard Asset within a CLODAO\n @dev See https://github.com/michaeldowling/clodao"
+        },
+        "fullyImplemented": false,
+        "id": 401,
+        "linearizedBaseContracts": [
+          401
+        ],
+        "name": "CLODAOReceivablesAsset",
+        "nameLocation": "184:22:4",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 371,
+              "nodeType": "StructuredDocumentation",
+              "src": "214:118:4",
+              "text": "@notice Get the currency this asset is denominated in\n @return The currency code this asset is denominated in"
+            },
+            "functionSelector": "e5a6b10f",
+            "id": 376,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currency",
+            "nameLocation": "344:8:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 372,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "352:2:4"
+            },
+            "returnParameters": {
+              "id": 375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 374,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 376,
+                  "src": "378:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 373,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "377:15:4"
+            },
+            "scope": 401,
+            "src": "335:58:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 377,
+              "nodeType": "StructuredDocumentation",
+              "src": "397:296:4",
+              "text": "@notice For example, if decimals equals 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 ** 2).  Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei.\n @return Returns the number of decimals used to get its user representation."
+            },
+            "functionSelector": "313ce567",
+            "id": 382,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decimals",
+            "nameLocation": "705:8:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 378,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "713:2:4"
+            },
+            "returnParameters": {
+              "id": 381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 380,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 382,
+                  "src": "739:5:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 379,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "739:5:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "738:7:4"
+            },
+            "scope": 401,
+            "src": "696:50:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 383,
+              "nodeType": "StructuredDocumentation",
+              "src": "750:102:4",
+              "text": "@notice Get the original princpal of this asset\n @return The amount of the original principal"
+            },
+            "functionSelector": "ba5d3078",
+            "id": 388,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "principal",
+            "nameLocation": "864:9:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "873:2:4"
+            },
+            "returnParameters": {
+              "id": 387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 386,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 388,
+                  "src": "899:6:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 385,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "899:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "898:8:4"
+            },
+            "scope": 401,
+            "src": "855:52:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 389,
+              "nodeType": "StructuredDocumentation",
+              "src": "911:100:4",
+              "text": "@notice Interest Rate, per day\n @return The interest rate per day, at 6 levels of precision"
+            },
+            "functionSelector": "7fca631f",
+            "id": 394,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "dailyInterestRate",
+            "nameLocation": "1023:17:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 390,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1040:2:4"
+            },
+            "returnParameters": {
+              "id": 393,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 392,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 394,
+                  "src": "1066:6:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 391,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1066:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1065:8:4"
+            },
+            "scope": 401,
+            "src": "1014:60:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 395,
+              "nodeType": "StructuredDocumentation",
+              "src": "1078:88:4",
+              "text": "@notice The method for calculating interest\n @return STATED_RATE or BANK_METHOD"
+            },
+            "functionSelector": "9dce3c78",
+            "id": 400,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "interestCalculcationMethod",
+            "nameLocation": "1178:26:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 396,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1204:2:4"
+            },
+            "returnParameters": {
+              "id": 399,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 398,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 400,
+                  "src": "1230:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 397,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1230:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1229:15:4"
+            },
+            "scope": 401,
+            "src": "1169:76:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 402,
+        "src": "174:1075:4",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:1211:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.10+commit.fc410830.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-12-04T02:26:36.352Z",
+  "devdoc": {
+    "details": "See https://github.com/michaeldowling/clodao",
+    "kind": "dev",
+    "methods": {
+      "currency()": {
+        "returns": {
+          "_0": "The currency code this asset is denominated in"
+        }
+      },
+      "dailyInterestRate()": {
+        "returns": {
+          "_0": "The interest rate per day, at 6 levels of precision"
+        }
+      },
+      "decimals()": {
+        "returns": {
+          "_0": "Returns the number of decimals used to get its user representation."
+        }
+      },
+      "interestCalculcationMethod()": {
+        "returns": {
+          "_0": "STATED_RATE or BANK_METHOD"
+        }
+      },
+      "principal()": {
+        "returns": {
+          "_0": "The amount of the original principal"
+        }
+      }
+    },
+    "title": "CLODAOAsset - Standard Asset within a CLODAO",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "currency()": {
+        "notice": "Get the currency this asset is denominated in"
+      },
+      "dailyInterestRate()": {
+        "notice": "Interest Rate, per day"
+      },
+      "decimals()": {
+        "notice": "For example, if decimals equals 2, a balance of 505 tokens should be displayed to a user as 5,05 (505 / 10 ** 2).  Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei."
+      },
+      "interestCalculcationMethod()": {
+        "notice": "The method for calculating interest"
+      },
+      "principal()": {
+        "notice": "Get the original princpal of this asset"
+      }
+    },
+    "version": 1
+  }
+}
